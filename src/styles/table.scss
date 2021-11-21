@@ -1,0 +1,119 @@
+.table-contain {
+  background: #ffffff;
+  padding: 24px 0;
+  min-height: 200px;
+  border-radius: 10px;
+  .data-tip {
+    margin: 0 0 20px;
+    font-weight: bold;
+    color: #3b414f;
+
+    > span {
+      color: $--color-primary;
+      font-size: 16px;
+    }
+  }
+
+}
+/deep/.el-table {
+  tr:hover {
+    // background: #F6F7FC;
+    background: $primaryBg;
+
+    > td {
+      background: transparent !important;
+    }
+  }
+  thead th {
+    border-right: 1px solid #000;
+  }
+  th.is-leaf {
+    border-color: #eeeeee;
+  }
+  .el-table__body td {
+    border: none;
+    padding: 10px 0;
+  }
+  .table-operation {
+    .el-tag + .el-tag {
+      margin-left: 10px;
+    }
+    .el-tag:hover {
+      cursor: pointer;
+    }
+  }
+  .status-gadget {
+    .status-title {
+      margin-left: 10px;
+      font: normal 500 14px PingFang-SC-Medium, PingFang-SC;
+    }
+    .active {
+      color: #679c56;
+    }
+    .inactive {
+      color: #959aac;
+    }
+  }
+}
+.el-table::before {
+  background: transparent;
+}
+/deep/ .operation-box {
+  overflow: hidden;
+  .el-button {
+    margin-right: 20px;
+    margin-left: 0;
+  }
+  .operation-box-top-tip {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1d202a;
+    position: relative;
+    .el-button {
+      margin-bottom: 0;
+    }
+    .num {
+      font-size: 20px;
+    }
+    .beds-box {
+      position: absolute;
+      right: 0;
+      top: 2px;
+      .bed {
+        margin-left: 26px;
+        > span {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          margin-bottom: -4px;
+          margin-right: 5px;
+          background: $--color-gray;
+        }
+        .purple {
+          background: $--color-purple;
+        }
+      }
+      .el-button {
+        margin-right: 0;
+        border: none;
+      }
+    }
+  }
+  .operation-box-tip {
+    color: $infoTextColor;
+    font-size: 14px;
+    margin-bottom: 20px;
+    > span {
+      color: #679c56;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+  }
+  .operation-box-btn-right {
+    float: right;
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+}
